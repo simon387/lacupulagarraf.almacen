@@ -1,0 +1,224 @@
+categoria
+
+cava
+aguas de la vida
+brandy y cognac
+licor
+whisky
+tenesse/bourbon
+vino blanco
+vino tinto
+ron
+gin tónica premium
+gin
+vodka
+tequila
+vino monovarietal
+vino internacional
+vino rosado
+champagnes
+
+---
+
+nome prodotto	categoria
+
+anna de codorniu blanc de blancs	cava
+anna de codorniu rosé	cava
+anna ice edition	cava
+juvé camps reserva familia bn	cava
+ars collecta blanc de noirs	cava
+gran juvé camps brut	cava
+jaume de codorniu gran reserva	cava
+pere ventura vintage	cava
+recaredo terrers brut nature	cava
+
+licor de hierbas el afilador	aguas de la vida
+licor sin alcohol	aguas de la vida
+limoncello villa massa	aguas de la vida
+licor de manzana o melocotón	aguas de la vida
+grappa nonino	aguas de la vida
+orujo blanco	aguas de la vida
+crema de orujo	aguas de la vida
+marc de cava	aguas de la vida
+marc de champagne	aguas de la vida
+calvados	aguas de la vida
+licor de crema catalana	aguas de la vida
+frangelico	aguas de la vida
+patxaran	aguas de la vida
+jagermeister	aguas de la vida
+
+carlos III	brandy y cognac
+magno	brandy y cognac
+torres V	brandy y cognac
+torres X	brandy y cognac
+mascaro	brandy y cognac
+carlos I	brandy y cognac
+duque de alba	brandy y cognac
+lepanto	brandy y cognac
+cardenal mendoza	brandy y cognac
+larios 1866	brandy y cognac
+saint vivant armagnac	brandy y cognac
+calvados	brandy y cognac
+
+malibu	licor
+amaretto disaronno	licor
+tía maría	licor
+cointreau	licor
+anís del mono	licor
+marie brizard	licor
+baileys	licor
+drambuie	licor
+grand marnier rojo	licor
+bonet	licor
+calisay	licor
+ponche caballero	licor
+crema de cassis	licor
+chartruesse amarillo	licor
+chartruesse verde	licor
+licor 43	licor
+
+dewars's white label	whisky
+dewars's 8 años caribbean smooth	whisky
+dewars's 12 años	whisky
+dewars's 15 años	whisky
+ballantines's	whisky
+the famous grouse	whisky
+johnnie walker etiqueta negra	whisky
+chivas 12	whisky
+cardhu	whisky
+highland park 12	whisky
+glenrothers	whisky
+macallan 12	whisky
+
+four roses	tenesse/bourbon
+jack daniel's	tenesse/bourbon
+
+waltraud	vino blanco
+jean leon viña gigi	vino blanco
+anec mut	vino blanco
+xino xano	vino blanco
+ermita d'espiells	vino blanco
+natureo	vino blanco
+moustillant de gramona	vino blanco
+gramona gessami	vino blanco
+can bas la romana	vino blanco
+
+rebels de batea	vino blanco
+reforjat	vino blanco
+tina 20	vino blanco
+castell raimat	vino blanco
+ànima de raimat	vino blanco
+viñas de anna	vino blanco
+la duda	vino blanco
+godeval cepas vellas	vino blanco
+
+legaris	vino blanco
+la charla	vino blanco
+josè pariente	vino blanco
+belondrade y lurton	vino blanco
+añares terra nova	vino blanco
+martin códax	vino blanco
+mar de frades	vino blanco
+leiras	vino blanco
+martin códax arousa	vino blanco
+
+viña pomal selecció cent.	vino tinto
+viña ardanza reserva	vino tinto
+ramon bilbao ed. limitada	vino tinto
+muga crianza	vino tinto
+muga prado enea	vino tinto
+montecillo	edición limitada	vino tinto
+marqués de vargas reserva	vino tinto
+pago de los capellanes crianza	vino tinto
+legaris roble	vino tinto
+
+aalto	vino tinto
+pago de carraovejas crianza	vino tinto
+alion	vino tinto
+vega sicilia valbueno 5° año	vino tinto
+flor de pingus	vino tinto
+tino pesquera crianza	vino tinto
+psi	vino tinto
+mauro	vino tinto
+
+purgatori	vino tinto
+raimat	vino tinto
+jean leon 3055	vino tinto
+jean leon la scala gran reserva	vino tinto
+el pispa	vino tinto
+octubre	vino tinto
+somiadors	vino tinto
+intramurs	vino tinto
+merum priorati desti	vino tinto
+
+bacardí carta blanca	ron
+bacardí 8 años	ron
+santa teresa gran reserva	ron
+santa teresa 1796	ron
+brugal	ron
+barceló añejo	ron
+brugal extra viejo	ron
+habana club 7 años	ron
+barceló imperial	ron
+zacapa 23 años	ron
+
+bombay dry	gin tónica premium
+bombay bramble	gin tónica premium
+bombay citron pressé	gin tónica premium
+bombay sapphire	gin tónica premium
+puerto de indias	gin tónica premium
+bulldog	gin tónica premium
+london n 1	gin tónica premium
+london n 3	gin tónica premium
+sipsmith	gin tónica premium
+
+martin miller's	gin
+masters	gin
+finest tangerines gold	gin
+roku	gin
+nordes	gin
+hendrick's	gin
+gin gold	gin
+gin mare	gin
+oxley	gin
+g'vine florasion	gin
+brockmans	gin
+monkey 47	gin
+
+erisoff	vodka
+stolichnaya	vodka
+absolut	vodka
+grey goose	vodka
+roberto cavalli	vodka
+
+patrón silver	tequila
+patrón reposado	tequila
+
+pazo san mauro	vino monovarietal
+fefiñanes	vino monovarietal
+
+pascal jolivet attitude	vino internacional
+fiocco di vite	vino internacional
+domaine nathalie	vino internacional
+miraval	vino internacional
+whispering ángel	vino internacional
+bouchard beaune du cháteau premier cru.	vino internacional
+
+moustillant de gramona	vino rosado
+augustus rose	vino rosado
+chivite las fincas rose	vino rosado
+viñas de anna rosat	vino rosado
+
+moët chandon brut imperial	champagnes
+moët chandon rose imperial	champagnes
+moët ice	champagnes
+ruinart blanc de blancs	champagnes
+bollinger special cuvée champagnes
+laurent perrier cuvée rosé	champagnes
+piper heidsieck	champagnes
+veuve clicquot brut	champagnes
+dom perignon	champagnes
+
+---
+
+óñíáë
