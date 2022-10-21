@@ -1,6 +1,3 @@
-<?php
-$bs = ( in_array( $_SERVER['REMOTE_ADDR'], array( '127.0.0.1', '::1' ) ) ) ? "localhost/" : "";
-?>
 <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar" style="display: none">
 
 	<a class="sidebar-brand d-flex align-items-center justify-content-center" href="//<?= $bs ?>grenyaobrador.es/almacen/fe/index.php">

@@ -6,7 +6,7 @@ include_once '../models/operation.php';
 class Product
 {
 	private $conn;
-	private $table_name = "product";
+	private $table_name = "lcga_product";
 	public $id;
 	public $category;
 	public $name;
@@ -83,8 +83,8 @@ class Product
 	function search($query_, $period_)
 	{
 		$query = "select p.id, p.category, p.name, s.name as supplier, p.unit, p.deposit0, p.deposit1, p.outflow0, p.outflow1, p.`left`, p.note" .
-				",(select description from operation o where o.product = p.id order by timestamp desc limit 1) as 'lastOperation' " .
-				"from " . $this->table_name . " p, supplier s where p.supplier = s.id and p.period = " . $period_ .
+				",(select description from lcga_operation o where o.product = p.id order by timestamp desc limit 1) as 'lastOperation' " .
+				"from " . $this->table_name . " p, lcga_supplier s where p.supplier = s.id and p.period = " . $period_ .
 				" and p.name like '%" . $query_ . "%'";
 		$stmt = $this->conn->prepare($query);
 		$stmt->execute();
@@ -103,7 +103,7 @@ class Product
 	function findAllInLastPeriod(): ?array
 	{
 		$query = "SELECT p.id, p.name, p.supplier, p.unit, p.note FROM " . $this->table_name . " p WHERE " .
-				"p.period = (select id from period where actual = true)";
+				"p.period = (select id from lcga_period where actual = true)";
 
 		$stmt = $this->conn->prepare($query);
 		$stmt->execute();
@@ -136,7 +136,7 @@ class Product
 	{
 		$query = "INSERT INTO " . $this->table_name .
 				" (category, name, supplier, unit, deposit0, deposit1, outflow0, outflow1, `left`, period, note) VALUES " .
-				"(1, :name, :supplier, :unit, 0, 0, 0, 0, 0, (select id from period where actual = true), :note)";
+				"(1, :name, :supplier, :unit, 0, 0, 0, 0, 0, (select id from lcga_period where actual = true), :note)";
 		$stmt = $this->conn->prepare($query);
 		$stmt->bindParam(":name", $name_);
 		$stmt->bindParam(":supplier", $supplier_);
