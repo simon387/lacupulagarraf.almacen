@@ -6,7 +6,7 @@ include_once '../models/operation.php';
 class Period
 {
 	private $conn;
-	private $table_name = "period";
+	private $table_name = "lcga_period";
 	public $id;
 	public $start;
 	public $end;
@@ -73,7 +73,7 @@ class Period
 		return $stmt;
 	}
 
-	function create()
+	function create(): bool
 	{
 		$query = "SELECT p.id FROM " . $this->table_name . " p WHERE p.actual = true";
 		$stmt = $this->conn->prepare($query);
@@ -107,8 +107,8 @@ class Period
 		extract($row);
 		$newId = $id;
 
-		$query = "INSERT INTO product (category, name, supplier, unit, note, deposit, outflow0, outflow1, `left`, period) " .
-			"SELECT category, name, supplier, unit, note, `left`, 0, 0, `left`, " . $newId . " FROM product p WHERE p.period =" . $oldId;
+		$query = "INSERT INTO lcga_product (category, name, supplier, unit, note, deposit0, outflow0, outflow1, `left`, period) " .
+			"SELECT category, name, supplier, unit, note, `left`, 0, 0, `left`, " . $newId . " FROM lcga_product p WHERE p.period =" . $oldId;
 		$stmt = $this->conn->prepare($query);
 		return $stmt->execute();
 	}

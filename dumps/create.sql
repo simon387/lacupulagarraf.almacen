@@ -1,7 +1,7 @@
 -- create database
 DROP SCHEMA IF EXISTS lacupulagarrafalmacen;
 CREATE SCHEMA lacupulagarrafalmacen;
-
+USE lacupulagarrafalmacen;
 
 
 
