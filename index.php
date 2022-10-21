@@ -1,5 +1,5 @@
 <?php
-require_once '../rest/config/protect.php';
+require_once 'rest/config/protect.php';
 with('components/pages/login.php', "scope");
 ?>
 <!DOCTYPE html>
