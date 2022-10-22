@@ -20,7 +20,7 @@
 	<div class="sidebar-heading">Logs</div>
 
 	<li class="nav-item">
-		<a class="nav-link" href="components/pages/logs.php">
+		<a class="nav-link" href="logs.php">
 			<em class="fas fa-fw fa-chart-area"></em>
 			<span>Operaciones</span></a>
 	</li>
@@ -39,9 +39,9 @@
 		<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
 			<div class="bg-white py-2 collapse-inner rounded">
 				<h6 class="collapse-header">Personalizar:</h6>
-				<a class="collapse-item" href="components/pages/periods.php">Períodos</a>
-				<a class="collapse-item" href="components/pages/suppliers.php">Proveedores</a>
-				<a class="collapse-item" href="components/pages/products.php">Productos</a>
+				<a class="collapse-item" href="periods.php">Períodos</a>
+				<a class="collapse-item" href="suppliers.php">Proveedores</a>
+				<a class="collapse-item" href="products.php">Productos</a>
 			</div>
 		</div>
 	</li>
