@@ -1,6 +1,5 @@
 <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
 
-	<!-- Sidebar Toggle (Topbar) -->
 	<button id="sidebarToggleTop-custom" class="btn btn-link rounded-circle mr-3">
 		<em class="fa fa-bars"></em>
 	</button>
@@ -17,17 +16,13 @@
 		</div>
 	</div>
 
-	<!-- Topbar Navbar -->
 	<ul class="navbar-nav ml-auto">
 
-		<!-- Nav Item - Alerts -->
 		<li class="d-none d-sm-block nav-item dropdown no-arrow mx-1">
 			<a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button"
 			   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 				<em class="fas fa-bell fa-fw"></em>
-				<!-- Counter - Alerts -->
 			</a>
-			<!-- Dropdown - Alerts -->
 			<div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
 			     aria-labelledby="alertsDropdown">
 				<h6 class="dropdown-header">
@@ -70,14 +65,11 @@
 			</div>
 		</li>
 
-		<!-- Nav Item - Messages -->
 		<li class="d-none d-sm-block nav-item dropdown no-arrow mx-1">
 			<a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button"
 			   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 				<em class="fas fa-envelope fa-fw"></em>
-				<!-- Counter - Messages -->
 			</a>
-			<!-- Dropdown - Messages -->
 			<div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
 			     aria-labelledby="messagesDropdown">
 				<h6 class="dropdown-header">
@@ -141,14 +133,12 @@
 
 		<div class="topbar-divider d-none d-sm-block"></div>
 
-		<!-- Nav Item - User Information -->
 		<li class="nav-item dropdown no-arrow">
 			<a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
 			   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 				<span class="mr-2 d-none d-lg-inline text-gray-600 small"><?php echo $_SESSION['username']?></span>
 				<img class="img-profile rounded-circle" alt="" src="img/undraw_profile.svg">
 			</a>
-			<!-- Dropdown - User Information -->
 			<div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
 			     aria-labelledby="userDropdown">
 				<a class="dropdown-item" href="#">
