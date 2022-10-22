@@ -20,8 +20,5 @@ with('login.php', "scope");
 
 <?php include "logoutModal.php"; ?>
 <?php include "newProductModal.php"; ?>
+<?php $page = "products"; ?>
 <?php include "jsImport.php"; ?>
-<script src="js/products/products.js"></script>
-
-</body>
-</html>

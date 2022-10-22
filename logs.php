@@ -19,8 +19,5 @@ with('login.php', "scope");
 </div>
 
 <?php include "logoutModal.php"; ?>
+<?php $page = "logs"; ?>
 <?php include "jsImport.php"; ?>
-<script src="js/logs/logs.js"></script>
-
-</body>
-</html>
