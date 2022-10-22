@@ -5,7 +5,7 @@ $(document).ready(function () {
 
 const dataTableLogs = $('#dataTableLogs').DataTable({
 	language: {
-		url: contextPath + "/vendor/datatables/es.json",
+		url: "vendor/datatables/es.json",
 	},
 	searching: true,
 	autoWidth: false,

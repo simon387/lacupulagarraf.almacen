@@ -1,6 +1,4 @@
-const pre = window.location.hostname === "localhost" ? "//localhost://grenyaobrador.es" : "";
-const rest = pre + "/almacen/rest/";
-const contextPath = rest.replace("rest/", "") + "fe";
+const rest = "rest/";
 
 $(document).ready(function () {
 	$("#sidebarToggleTop-custom").on("click", function () {

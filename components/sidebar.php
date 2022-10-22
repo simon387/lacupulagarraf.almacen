@@ -1,6 +1,6 @@
 <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar" style="display: none">
 
-	<a class="sidebar-brand d-flex align-items-center justify-content-center" href="//<?= $bs ?>grenyaobrador.es/almacen/fe/index.php">
+	<a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.php">
 		<div class="sidebar-brand-icon rotate-n-15">
 			<em class="fas fa-laugh-wink"></em>
 		</div>
@@ -10,7 +10,7 @@
 	<hr class="sidebar-divider my-0">
 
 	<li class="nav-item">
-		<a class="nav-link" href="//<?= $bs ?>grenyaobrador.es/almacen/fe/index.php">
+		<a class="nav-link" href="index.php">
 			<em class="fas fa-fw fa-tachometer-alt"></em>
 			<span>Dashboard</span></a>
 	</li>
@@ -20,7 +20,7 @@
 	<div class="sidebar-heading">Logs</div>
 
 	<li class="nav-item">
-		<a class="nav-link" href="//<?= $bs ?>grenyaobrador.es/almacen/fe/components/pages/logs.php">
+		<a class="nav-link" href="components/pages/logs.php">
 			<em class="fas fa-fw fa-chart-area"></em>
 			<span>Operaciones</span></a>
 	</li>
@@ -39,9 +39,9 @@
 		<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
 			<div class="bg-white py-2 collapse-inner rounded">
 				<h6 class="collapse-header">Personalizar:</h6>
-				<a class="collapse-item" href="//<?= $bs ?>grenyaobrador.es/almacen/fe/components/pages/periods.php">Períodos</a>
-				<a class="collapse-item" href="//<?= $bs ?>grenyaobrador.es/almacen/fe/components/pages/suppliers.php">Proveedores</a>
-				<a class="collapse-item" href="//<?= $bs ?>grenyaobrador.es/almacen/fe/components/pages/products.php">Productos</a>
+				<a class="collapse-item" href="components/pages/periods.php">Períodos</a>
+				<a class="collapse-item" href="components/pages/suppliers.php">Proveedores</a>
+				<a class="collapse-item" href="components/pages/products.php">Productos</a>
 			</div>
 		</div>
 	</li>

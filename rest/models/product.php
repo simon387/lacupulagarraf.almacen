@@ -28,7 +28,7 @@ class Product
 	function getBySupplierAndPeriod($supplierID, $periodID)
 	{
 		$query = "SELECT p.id, p.category, p.name, p.supplier, p.unit, p.deposit0, p.deposit1, p.outflow0, " .
-				"p.outflow1, p.left, p.period, p.note, (select description from operation o where o.product = p.id order by " .
+				"p.outflow1, p.left, p.period, p.note, (select description from lcga_operation o where o.product = p.id order by " .
 				"timestamp desc limit 1) as 'lastOperation' FROM " . $this->table_name . " p WHERE " .
 				"p.supplier = " . $supplierID . " AND p.period = " . $periodID;
 
