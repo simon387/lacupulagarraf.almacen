@@ -2,11 +2,10 @@
 require_once 'rest/config/protect.php';
 with('login.php', "scope");
 $page = "dashboard";
-?>
 
-<?php include "head.php"; ?>
-<?php include "wrapper.php"; ?>
+include "head.php";
+include "wrapper.php";
 
-<?php include "logoutModal.php"; ?>
-<?php include "newPeriodModal.php"; ?>
-<?php include "jsImport.php"; ?>
+include "logoutModal.php";
+include "newPeriodModal.php";
+include "tail.php";
