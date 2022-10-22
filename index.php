@@ -20,8 +20,5 @@ with('login.php', "scope");
 
 <?php include "logoutModal.php"; ?>
 <?php include "newPeriodModal.php"; ?>
+<?php $page = "dashboard"; ?>
 <?php include "jsImport.php"; ?>
-<script src="js/dashboard/dashboard.js"></script>
-
-</body>
-</html>

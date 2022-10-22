@@ -10,6 +10,7 @@
 <script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
 <script src="vendor/datatables-responsive/db-resp-min.js"></script>
 <script src="js/custom.js"></script>
+<?php echo "<script src='js/$page/$page.js'></script>"; ?>
 
 <script type="application/javascript">
 	const userId = <?php echo $_SESSION['userid'] ?>;
@@ -17,3 +18,6 @@
 </script>
 
 <div class="loading" style="display:none;">Loading&#8230;</div>
+
+</body>
+</html>
