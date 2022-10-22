@@ -3,8 +3,6 @@ require_once 'rest/config/protect.php';
 with('login.php', "scope");
 ?>
 
-<!DOCTYPE html>
-<html lang="es">
 <?php include "head.php"; ?>
 
 <body id="page-top">
@@ -23,7 +21,6 @@ with('login.php', "scope");
 <?php include "logoutModal.php"; ?>
 <?php include "newPeriodModal.php"; ?>
 <?php include "jsImport.php"; ?>
-
 <script src="js/dashboard/dashboard.js"></script>
 
 </body>
