@@ -1,6 +1,6 @@
 <?php
 require_once '../../rest/config/protect.php';
-with('../../components/pages/login.php', "scope");
+with('../../login.php', "scope");
 include_once '../config/database.php';
 include_once '../models/supplier.php';
 

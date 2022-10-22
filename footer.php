@@ -1,6 +1,6 @@
 <?php
-require_once '../rest/config/config.php';
-$f = @fopen(SCRIPT_ROOT . "changelog.txt", 'r');
+require_once 'rest/config/config.php';
+$f = @fopen("changelog.txt", 'r');
 $version = fgets($f);
 fclose($f);
 ?>
