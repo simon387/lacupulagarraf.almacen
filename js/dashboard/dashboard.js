@@ -94,7 +94,7 @@ function search() {
 const dataTableDashboard = $('#dataTableDashboard').DataTable({
 	paging: true,
 	language: {
-		url: contextPath + "/vendor/datatables/es.json",
+		url: "vendor/datatables/es.json",
 	},
 	searching: true,
 	autoWidth: false,
