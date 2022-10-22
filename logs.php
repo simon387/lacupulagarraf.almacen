@@ -19,49 +19,21 @@ with('login.php', "scope");
 
 <body id="page-top">
 
-<!-- Page Wrapper -->
 <div id="wrapper">
 	<?php include "sidebar.php"; ?>
-
-	<!-- Content Wrapper -->
 	<div id="content-wrapper" class="d-flex flex-column">
-
-		<!-- Main Content -->
 		<div id="content">
 			<?php include "topbar.php"; ?>
 			<?php include "logsBody.php"; ?>
 		</div>
-		<!-- End of Main Content -->
-
 		<?php include "footer.php"; ?>
 	</div>
-	<!-- End of Content Wrapper -->
-
 </div>
-<!-- End of Page Wrapper -->
 
-<!-- Scroll to Top Button-->
-<a class="scroll-to-top rounded" href="#page-top">
-	<em class="fas fa-angle-up"></em>
-</a>
 
 <?php include "logoutModal.php"; ?>
-<script src="vendor/jquery/jquery.min.js"></script>
-<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-<script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-<script src="js/sb-admin-2.min.js"></script>
-<script src="vendor/datatables/jquery.dataTables.min.js"></script>
-<script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
-<script src="js/custom.js"></script>
+<?php include "jsImport.php"; ?>
 <script src="js/logs/logs.js"></script>
-
-<script type="application/javascript">
-	const userId = <?php echo $_SESSION['userid'] ?>;
-	const username = "<?php echo $_SESSION['username'] ?>";
-</script>
-
-<!-- Modal spinner in overlay -->
-<div class="loading" style="display:none;">Loading&#8230;</div>
 
 </body>
 </html>
