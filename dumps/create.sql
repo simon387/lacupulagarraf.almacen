@@ -39,14 +39,14 @@ INSERT INTO lcga_user (email, name, pass, role) VALUES ('simone.celia@simoneceli
 
 
 -- create super_category table
-DROP TABLE IF EXISTS lcga_super_category;
-CREATE TABLE lcga_super_category
-(
-    id   INT AUTO_INCREMENT PRIMARY KEY,
-    name VARCHAR(255) NOT NULL
-);
--- insert default super category
-INSERT INTO lcga_super_category (name) VALUES ('sin super categoría');
+# DROP TABLE IF EXISTS lcga_super_category;
+# CREATE TABLE lcga_super_category
+# (
+#     id   INT AUTO_INCREMENT PRIMARY KEY,
+#     name VARCHAR(255) NOT NULL
+# );
+# -- insert default super category
+# INSERT INTO lcga_super_category (name) VALUES ('sin super categoría');
 
 
 

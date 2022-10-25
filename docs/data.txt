@@ -18,6 +18,19 @@ vino internacional
 vino rosado
 champagnes
 
+categorias new
+
+vinos            -> cava, vino blanco, vino tinto, vino monovarietal, vino internacional, champagnes
+whisky           -> whisky, tenesse/bourbon
+aguas de la vida -> aguas de la vida
+ron              -> ron
+gin              -> gin tónica premium, gin
+vodka            -> vodka
+tequila          -> tequila
+refrescos        -> ?
+brandy y cognac  -> brandy y cognac
+licores          -> licor
+
 ---
 
 nome prodotto	categoria
