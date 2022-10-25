@@ -20,7 +20,7 @@ champagnes
 
 categorias new
 
-vinos            -> cava, vino blanco, vino tinto, vino monovarietal, vino internacional, champagnes
+vinos            -> cava, vino blanco, vino tinto, vino monovarietal, vino internacional, champagnes, vino rosado
 whisky           -> whisky, tenesse/bourbon
 aguas de la vida -> aguas de la vida
 ron              -> ron
