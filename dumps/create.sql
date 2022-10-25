@@ -56,12 +56,12 @@ DROP TABLE IF EXISTS lcga_category;
 CREATE TABLE lcga_category
 (
     id   INT AUTO_INCREMENT PRIMARY KEY,
-    name VARCHAR(255) NOT NULL,
-    super_category INT NOT NULL,
-    CONSTRAINT category__super_category__id_fk FOREIGN KEY (super_category) REFERENCES lcga_super_category (id)
+    name VARCHAR(255) NOT NULL
+#     super_category INT NOT NULL,
+#     CONSTRAINT category__super_category__id_fk FOREIGN KEY (super_category) REFERENCES lcga_super_category (id)
 );
 -- insert default category
-INSERT INTO lcga_category (name, super_category) VALUES ('sin categoría', 1);
+INSERT INTO lcga_category (name) VALUES ('sin categoría');
 
 
 
