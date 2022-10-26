@@ -107,8 +107,8 @@ DROP TABLE IF EXISTS lcga_product;
 CREATE TABLE lcga_product
 (
     id       INT AUTO_INCREMENT PRIMARY KEY,
-    category INT           NOT NULL,
     name     VARCHAR(255)  NOT NULL,
+    category INT           NOT NULL,
     supplier INT           NOT NULL,
     unit     VARCHAR(255)  NULL,
     deposit0 DECIMAL(9, 2) NULL,
