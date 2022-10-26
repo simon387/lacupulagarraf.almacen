@@ -73,3 +73,13 @@ GET {{baseURL}}/operation/readAll.php
 ### get user info
 GET {{baseURL}}/user/read.php?id=1
 
+### get all categories
+GET {{baseURL}}/controllers/category.php
+
+### login
+POST http://localhost/lacupulagarraf.almacen/login.php?email=andres%40almacen.com&password=pass
+
+### get products by category and period
+GET {{baseURL}}/product/read.php?category_id=1&period_id=1
+Accept: application/json
+Content-Type: application/json
