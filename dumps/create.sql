@@ -32,8 +32,8 @@ CREATE TABLE lcga_user
     CONSTRAINT user__role__id_fk FOREIGN KEY (role) REFERENCES lcga_role (id)
 );
 -- insert default users
-INSERT INTO lcga_user (email, name, pass, role) VALUES ('andres', 'Andres', 'pass', 1); -- admin
-INSERT INTO lcga_user (email, name, pass, role) VALUES ('simone.celia@simonecelia.it', 'Simone Celia', '', 2); -- super-admin
+INSERT INTO lcga_user (email, name, pass, role) VALUES ('andres@almacen.com', 'Andres', 'change me', 1); -- admin
+INSERT INTO lcga_user (email, name, pass, role) VALUES ('simone.celia@simonecelia.it', 'Simone Celia', 'change me', 2); -- super-admin
 
 
 
