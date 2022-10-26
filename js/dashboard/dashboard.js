@@ -264,16 +264,16 @@ function renderTableDashboard(dataTable, data, isFromSearch = false) {
 		unitIsAlwaysEmpty &= unit === "";
 		const note = null === o["note"] ? "" : o["note"];
 		noteIsAlwaysEmpty &= unit === "";
-		const deposit0 = null === o["deposit0"] ? "" : o["deposit0"];
-		const deposit1 = null === o["deposit1"] ? "" : o["deposit1"];
+		const deposit0 = null === o["deposit0"] ? "" : parseInt(o["deposit0"]);
+		const deposit1 = null === o["deposit1"] ? "" : parseInt(o["deposit1"]);
 		const left = calcFlow(deposit0, deposit1);
 		const lastOperation = null === o["lastOperation"] ? "" : o["lastOperation"];
 		dataTable.row.add([
 			name,
 			unit,
 			note,
-			'<input onchange="updateProduct(' + id + ', 0)" type="number" min="0" value="' + deposit0 + '" class="form-control" id="deposit0-' + id + '">',
-			'<input onchange="updateProduct(' + id + ', 1)" type="number" min="0" value="' + deposit1 + '" class="form-control" id="deposit1-' + id + '">',
+			'<input onkeypress="return event.charCode >= 48 && event.charCode <= 57" oninput="this.value = Math.round(this.value)" onchange="updateProduct(' + id + ', 0)" type="number" min="0" step="1" value="' + deposit0 + '" class="form-control" id="deposit0-' + id + '">',
+			'<input onkeypress="return event.charCode >= 48 && event.charCode <= 57" oninput="this.value = Math.round(this.value)" onchange="updateProduct(' + id + ', 1)" type="number" min="0" step="1" value="' + deposit1 + '" class="form-control" id="deposit1-' + id + '">',
 			// '<input onchange="updateProduct(' + id + ', 2)" type="number" min="0" value="' + outflow0 + '" class="form-control" id="outflow0-' + id + '">',
 			'<input disabled type="number" value="' + left + '" class="form-control text-center" id="left-' + id + '">',
 			'<div id="lastOperation-' + id + '">' + lastOperation + '</div>',
