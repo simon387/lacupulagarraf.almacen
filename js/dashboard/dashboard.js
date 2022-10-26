@@ -3,7 +3,8 @@ let user;
 
 $(document).ready(function () {
 	getLastPeriod();
-	getSuppliers();
+	// getSuppliers();
+	getCategories();
 	// new period
 	$("#btn-new-page").on("click", function () {
 		$('#newPeriodModal').modal('show');
@@ -68,7 +69,8 @@ $(document).ready(function () {
 });
 
 function search() {
-	document.getElementById("supplier-selected").innerHTML = "todos los proveedores";
+	// document.getElementById("supplier-selected").innerHTML = "todos los proveedores";
+	document.getElementById("category-selected").innerHTML = "todas las categorias";
 	const query = document.getElementById("input-search").value;
 	$.ajax({
 		type: "POST",
@@ -81,7 +83,7 @@ function search() {
 			period: period["id"],
 		}),
 		success: function (data_) {
-			removeActiveClassFromSupplier();
+			removeActiveClassFromBaseSelector();
 			renderTableDashboard(dataTableDashboard, data_, true);
 		},
 		error: function () {
@@ -148,13 +150,43 @@ function refreshPeriod() {
 	if ("1" === period["counter"]) {
 		document.getElementById("btn-prev-page").disabled = true;
 	}
-	getDatatableDataBySupplierAndPeriod(2, period["id"]);
+	// getDatatableDataBySupplierAndPeriod(2, period["id"]);
+	getDatatableDataByCategoryAndPeriod(1, period["id"]);
 }
 
-function getSuppliers() {
+// function getSuppliers() {
+// 	$.ajax({
+// 		type: 'GET',
+// 		url: rest + "supplier/readAll.php",
+// 		processData: false,
+// 		contentType: false,
+// 		success: function (data) {
+// 			const array = JSON.parse(data).list;
+// 			let innerHTML = "";
+// 			for (let i = 1; i < array.length; i++) {
+// 				let active = "";
+// 				if (i === 1) {
+// 					active = "active";
+// 					document.getElementById("supplier-selected").innerHTML = array[i]["name"].toUpperCase();
+// 				}
+// 				innerHTML += '<li class="page-item ' + active + '" data-text="' + array[i]["id"] +
+// 					'"><a class="page-link" href="#">' + array[i]["name"].toUpperCase() + '</a></li>';
+// 			}
+// 			document.getElementById("main-paginator").innerHTML = innerHTML;
+// 			$(".page-item").on("click", function () {
+// 				removeActiveClassFromBaseSelector();
+// 				$(this).addClass('active');
+// 				document.getElementById("supplier-selected").innerHTML = this.innerText;
+// 				getDatatableDataBySupplierAndPeriod($(this).attr("data-text"), period["id"]);
+// 			});
+// 		}
+// 	});
+// }
+
+function getCategories() {
 	$.ajax({
 		type: 'GET',
-		url: rest + "supplier/readAll.php",
+		url: rest + "controllers/category.php",
 		processData: false,
 		contentType: false,
 		success: function (data) {
@@ -164,36 +196,51 @@ function getSuppliers() {
 				let active = "";
 				if (i === 1) {
 					active = "active";
-					document.getElementById("supplier-selected").innerHTML = array[i]["name"].toUpperCase();
+					document.getElementById("category-selected").innerHTML = array[i]["name"].toUpperCase();
 				}
 				innerHTML += '<li class="page-item ' + active + '" data-text="' + array[i]["id"] +
 					'"><a class="page-link" href="#">' + array[i]["name"].toUpperCase() + '</a></li>';
 			}
-
 			document.getElementById("main-paginator").innerHTML = innerHTML;
-
 			$(".page-item").on("click", function () {
-				removeActiveClassFromSupplier();
+				removeActiveClassFromBaseSelector();
 				$(this).addClass('active');
-				document.getElementById("supplier-selected").innerHTML = this.innerText;
-				getDatatableDataBySupplierAndPeriod($(this).attr("data-text"), period["id"]);
+				document.getElementById("category-selected").innerHTML = this.innerText;
+				getDatatableDataByCategoryAndPeriod($(this).attr("data-text"), period["id"]);
 			});
 		}
 	});
 }
 
-function removeActiveClassFromSupplier() {
+function removeActiveClassFromBaseSelector() {
 	const elems = document.querySelectorAll(".page-item");
 	[].forEach.call(elems, function (el) {
 		el.classList.remove("active");
 	});
 }
 
-function getDatatableDataBySupplierAndPeriod(supplierID, periodID) {
+// function getDatatableDataBySupplierAndPeriod(supplierID, periodID) {
+// 	blockScreen();
+// 	$.ajax({
+// 		type: "GET",
+// 		url: rest + "product/read.php?supplier_id=" + supplierID + "&period_id=" + periodID,
+// 		success: function (data) {
+// 			renderTableDashboard(dataTableDashboard, data);
+// 		},
+// 		error: function () {
+// 			unblockScreen();
+// 			dataTableDashboard.clear();
+// 			dataTableDashboard.draw();
+// 		}
+// 	});
+// }
+
+function getDatatableDataByCategoryAndPeriod(categoryID, periodID) {
 	blockScreen();
 	$.ajax({
 		type: "GET",
-		url: rest + "product/read.php?supplier_id=" + supplierID + "&period_id=" + periodID,
+		url: rest + "product/read.php?category_id=" + categoryID + "&period_id=" + periodID,
+		// url: rest + "product/read.php?supplier_id=" + supplierID + "&period_id=" + periodID,
 		success: function (data) {
 			renderTableDashboard(dataTableDashboard, data);
 		},

@@ -28,9 +28,21 @@ class Product
 	function getBySupplierAndPeriod($supplierID, $periodID)
 	{
 		$query = "SELECT p.id, p.category, p.name, p.supplier, p.unit, p.deposit0, p.deposit1, p.outflow0, " .
-				"p.outflow1, p.left, p.period, p.note, (select description from lcga_operation o where o.product = p.id order by " .
-				"timestamp desc limit 1) as 'lastOperation' FROM " . $this->table_name . " p WHERE " .
-				"p.supplier = " . $supplierID . " AND p.period = " . $periodID;
+			"p.outflow1, p.left, p.period, p.note, (select description from lcga_operation o where o.product = p.id order by " .
+			"timestamp desc limit 1) as 'lastOperation' FROM " . $this->table_name . " p WHERE " .
+			"p.supplier = " . $supplierID . " AND p.period = " . $periodID;
+
+		$stmt = $this->conn->prepare($query);
+		$stmt->execute();
+		return $stmt;
+	}
+
+	function getByCategoryAndPeriod($categoryID, $periodID)
+	{
+		$query = "SELECT p.id, p.category, p.name, p.supplier, p.unit, p.deposit0, p.deposit1, p.outflow0, " .
+			"p.outflow1, p.left, p.period, p.note, (select description from lcga_operation o where o.product = p.id order by " .
+			"timestamp desc limit 1) as 'lastOperation' FROM " . $this->table_name . " p WHERE " .
+			"p.category = " . $categoryID . " AND p.period = " . $periodID;
 
 		$stmt = $this->conn->prepare($query);
 		$stmt->execute();
@@ -83,9 +95,9 @@ class Product
 	function search($query_, $period_)
 	{
 		$query = "select p.id, p.category, p.name, s.name as supplier, p.unit, p.deposit0, p.deposit1, p.outflow0, p.outflow1, p.`left`, p.note" .
-				",(select description from lcga_operation o where o.product = p.id order by timestamp desc limit 1) as 'lastOperation' " .
-				"from " . $this->table_name . " p, lcga_supplier s where p.supplier = s.id and p.period = " . $period_ .
-				" and p.name like '%" . $query_ . "%'";
+			",(select description from lcga_operation o where o.product = p.id order by timestamp desc limit 1) as 'lastOperation' " .
+			"from " . $this->table_name . " p, lcga_supplier s where p.supplier = s.id and p.period = " . $period_ .
+			" and p.name like '%" . $query_ . "%'";
 		$stmt = $this->conn->prepare($query);
 		$stmt->execute();
 		return $stmt;
@@ -103,7 +115,7 @@ class Product
 	function findAllInLastPeriod(): ?array
 	{
 		$query = "SELECT p.id, p.name, p.supplier, p.unit, p.note FROM " . $this->table_name . " p WHERE " .
-				"p.period = (select id from lcga_period where actual = true)";
+			"p.period = (select id from lcga_period where actual = true)";
 
 		$stmt = $this->conn->prepare($query);
 		$stmt->execute();
@@ -118,11 +130,11 @@ class Product
 				extract($row);
 
 				$product_item = array(
-						"id" => $id,
-						"name" => $name,
-						"supplier" => $supplier,
-						"unit" => $unit,
-						"note" => $note
+					"id" => $id,
+					"name" => $name,
+					"supplier" => $supplier,
+					"unit" => $unit,
+					"note" => $note
 				);
 
 				$product_arr["list"][] = $product_item;
@@ -135,8 +147,8 @@ class Product
 	function create($name_, $supplier_, $unit_, $note_): bool
 	{
 		$query = "INSERT INTO " . $this->table_name .
-				" (category, name, supplier, unit, deposit0, deposit1, outflow0, outflow1, `left`, period, note) VALUES " .
-				"(1, :name, :supplier, :unit, 0, 0, 0, 0, 0, (select id from lcga_period where actual = true), :note)";
+			" (category, name, supplier, unit, deposit0, deposit1, outflow0, outflow1, `left`, period, note) VALUES " .
+			"(1, :name, :supplier, :unit, 0, 0, 0, 0, 0, (select id from lcga_period where actual = true), :note)";
 		$stmt = $this->conn->prepare($query);
 		$stmt->bindParam(":name", $name_);
 		$stmt->bindParam(":supplier", $supplier_);

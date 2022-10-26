@@ -1,6 +1,6 @@
 <?php
-require_once '../../rest/config/protect.php';
-with('../../fe/login.php', "scope");
+require_once '../config/protect.php';
+with('../../login.php', "scope");
 include_once '../config/database.php';
 include_once '../models/operation.php';
 
@@ -22,7 +22,7 @@ if ($num > 0) {
 			"id" => $id,
 			"user" => $user,
 			"timestamp" => $timestamp,
-			"product" => $product,
+			"product" => $category,
 			"description" => $description
 		);
 

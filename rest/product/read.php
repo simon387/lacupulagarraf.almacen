@@ -1,6 +1,6 @@
 <?php
-require_once '../../rest/config/protect.php';
-with('../../fe/login.php', "scope");
+require_once '../config/protect.php';
+with('../../login.php', "scope");
 include_once '../config/database.php';
 include_once '../models/product.php';
 
@@ -8,7 +8,8 @@ $database = new Database();
 $db = $database->getConnection();
 
 $product = new Product($db);
-$stmt = $product->getBySupplierAndPeriod($_GET['supplier_id'], $_GET['period_id']);
+//$stmt = $product->getBySupplierAndPeriod($_GET['supplier_id'], $_GET['period_id']);
+$stmt = $product->getByCategoryAndPeriod($_GET['category_id'], $_GET['period_id']);
 $num = $stmt->rowCount();
 
 if ($num > 0) {
