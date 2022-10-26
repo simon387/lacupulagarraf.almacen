@@ -22,7 +22,7 @@ if ($num > 0) {
 			"id" => $id,
 			"user" => $user,
 			"timestamp" => $timestamp,
-			"product" => $category,
+			"product" => $product,
 			"description" => $description
 		);
 
