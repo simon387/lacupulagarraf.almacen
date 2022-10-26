@@ -29,7 +29,7 @@ function getAllSuppliers() {
 }
 
 function loadSelect(array, select) {
-	for (let i = 1; i < array.length; i++) {
+	for (let i = 0; i < array.length; i++) {
 		const opt = document.createElement('option');
 		opt.value = array[i]["id"];
 		opt.innerHTML = array[i]["name"].toUpperCase();
@@ -91,7 +91,7 @@ function renderTableProducts(dataTable, data, suppliers) {
 
 function generateSupplierSelect(id, supplier, suppliers) {
 	let select = '<select id="supplier-' + id + '" class="form-control" onchange="saveProduct(' + id + ')">';
-	for (let i = 1; i < suppliers.length; i++) {
+	for (let i = 0; i < suppliers.length; i++) {
 		const selected = parseInt(supplier) === parseInt(suppliers[i]["id"]) ? "selected" : "";
 		const opt = '<option ' + selected + ' value="' + suppliers[i]["id"] + '">' + suppliers[i]["name"].toUpperCase() + '</option>';
 		select += opt;
