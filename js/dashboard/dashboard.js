@@ -190,7 +190,7 @@ function getCategories() {
 		processData: false,
 		contentType: false,
 		success: function (data) {
-			const array = JSON.parse(data).list;
+			const array = data.list;
 			let innerHTML = "";
 			for (let i = 1; i < array.length; i++) {
 				let active = "";
