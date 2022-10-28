@@ -1,5 +1,4 @@
 <?php
-require_once 'rest/config/config.php';
 $f = @fopen("changelog.txt", 'r');
 $version = fgets($f);
 fclose($f);
