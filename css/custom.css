@@ -46,3 +46,8 @@
 #dataTableProducts_filter {
     float: right;
 }
+
+.category-selector {
+    height: 3.4375em;
+    padding: 13px!important;
+}

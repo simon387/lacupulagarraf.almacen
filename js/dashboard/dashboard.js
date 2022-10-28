@@ -199,7 +199,7 @@ function getCategories() {
 					document.getElementById("category-selected").innerHTML = array[i]["name"].toUpperCase();
 				}
 				innerHTML += '<li class="page-item ' + active + '" data-text="' + array[i]["id"] +
-					'"><a class="page-link" href="#">' + array[i]["name"].toUpperCase() + '</a></li>';
+					'"><a class="page-link category-selector" href="#">' + array[i]["name"].toUpperCase() + '</a></li>';
 			}
 			document.getElementById("main-paginator").innerHTML = innerHTML;
 			$(".page-item").on("click", function () {
