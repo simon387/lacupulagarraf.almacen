@@ -41,7 +41,7 @@
 						<th data-priority="6" scope="row" class="col" data-field="unit">Unidad</th>
 						<th data-priority="7" scope="row" class="col" data-field="note">Note</th>
 						<th data-priority="2" scope="row" class="col" data-field="deposit0">Almacen</th>
-						<th data-priority="3" scope="row" class="col" data-field="deposit1">Tienda</th>
+						<th data-priority="3" scope="row" class="col" data-field="deposit1">Servicio</th>
 						<th data-priority="4" scope="row" class="col" data-field="left">Cuanto Quedan</th>
 						<th data-priority="5" scope="row" class="col" data-field="lastOperation">Última Edición</th>
 					</tr>

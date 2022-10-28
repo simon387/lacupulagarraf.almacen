@@ -301,11 +301,11 @@ function updateProduct(id, operation) {
 			num = deposit0;
 			break;
 		case 1:
-			operation = "<em>Tienda</em>";
+			operation = "<em>Servicio</em>";
 			num = deposit1;
 			break;
 		case 2:
-			operation = "<em>Salida Tienda</em>";
+			operation = "<em>Salida Servicio</em>";
 			num = outflow0;
 			break;
 	}
