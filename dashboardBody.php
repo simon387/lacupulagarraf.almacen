@@ -25,9 +25,9 @@
 
 	<div class="card shadow mb-4">
 		<div class="card-header py-3">
-			<h6 style="display: none" class="m-0 font-weight-bold text-primary">Período Almacén desde <span id="period-from"></span> hasta <span id="period-to"></span>
-				 - Productos del proveedor: <span id="supplier-selected"></span>
-			</h6>
+<!--			<h6 class="m-0 font-weight-bold text-primary">Período Almacén desde <span id="period-from"></span> hasta <span id="period-to"></span>-->
+<!--				 - Productos del proveedor: <span id="supplier-selected"></span>-->
+<!--			</h6>-->
 			<h6 class="m-0 font-weight-bold text-primary">Período Almacén desde <span id="period-from"></span> hasta <span id="period-to"></span>
 				- Productos de categoria: <span id="category-selected"></span>
 			</h6>
